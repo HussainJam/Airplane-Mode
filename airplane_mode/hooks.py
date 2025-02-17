@@ -5,6 +5,10 @@ app_description = "Airplane"
 app_email = "jamal.se17@gmail.com"
 app_license = "mit"
 
+doctype_list_js = {
+    "Airplane Ticket": "public/js/airplane_ticket_list.js"
+}
+
 # Apps
 # ------------------
 
