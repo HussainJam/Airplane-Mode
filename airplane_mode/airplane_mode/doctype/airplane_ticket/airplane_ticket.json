@@ -19,7 +19,9 @@
   "departure_date",
   "departure_time",
   "column_break_ucxg",
-  "duration_of_flight"
+  "duration_of_flight",
+  "section_break_eijr",
+  "add_ons"
  ],
  "fields": [
   {
@@ -112,11 +114,21 @@
    "fieldname": "passenger_details_section",
    "fieldtype": "Section Break",
    "label": "Passenger Details"
+  },
+  {
+   "fieldname": "section_break_eijr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "add_ons",
+   "fieldtype": "Table",
+   "label": "Table",
+   "options": "Airplane Ticket Add-on Item"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-17 17:28:38.242944",
+ "modified": "2025-02-21 22:25:18.175931",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
