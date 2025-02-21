@@ -9,6 +9,13 @@ doctype_list_js = {
     "Airplane Ticket": "public/js/airplane_ticket_list.js"
 }
 
+# doc_events = {
+#     "Airplane Ticket": {
+#         "before_submit": "airplane_mode.doctype.airplane_ticket.before_submit"
+#     }
+# }
+
+
 # Apps
 # ------------------
 
