@@ -14,6 +14,12 @@ doctype_list_js = {
 #         "before_submit": "airplane_mode.doctype.airplane_ticket.before_submit"
 #     }
 # }
+# doc_events = {
+#     "Airplane Ticket": {
+#         "before_insert": "airplane_mode.airplane_mode.doctype.airplane_ticket.before_insert",
+#         "on_submit": "airplane_mode.airplane_mode.doctype.airplane_ticket.on_submit",
+#     }
+# }
 
 
 # Apps

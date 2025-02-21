@@ -1,31 +1,30 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{flight}-{airport_code}-to-{destination_code}",
+ "autoname": "format:{flight}",
  "creation": "2025-02-17 15:26:48.350656",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "status",
   "passenger_details_section",
   "passenger",
-  "source_airport",
+  "status",
   "source_airport_code",
   "column_break_bztx",
   "flight",
-  "destination",
+  "seat",
   "destination_code",
-  "departure_details_section",
-  "departure_date",
-  "duration_of_flight",
-  "column_break_ucxg",
-  "departure_time",
   "section_break_eijr",
   "add_ons",
   "total_amount_section",
   "flight_price",
   "column_break_ssyw",
-  "total_amount"
+  "total_amount",
+  "departure_details_section",
+  "departure_date",
+  "duration_of_flight",
+  "column_break_ucxg",
+  "departure_time"
  ],
  "fields": [
   {
@@ -34,14 +33,6 @@
    "in_list_view": 1,
    "label": "Passenger",
    "options": "Flight Passenger",
-   "reqd": 1
-  },
-  {
-   "fieldname": "source_airport",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Source Airport",
-   "options": "Airport",
    "reqd": 1
   },
   {
@@ -57,19 +48,10 @@
    "reqd": 1
   },
   {
-   "fieldname": "destination",
-   "fieldtype": "Link",
-   "label": "Destination Airport",
-   "options": "Airport",
-   "reqd": 1
-  },
-  {
-   "fetch_from": "flight.destination_airport",
+   "fetch_from": "flight.source_airport_code",
    "fieldname": "destination_code",
    "fieldtype": "Data",
    "label": "Destination Airport Code",
-   "options": "Airport",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -146,16 +128,22 @@
    "label": "Total Amount"
   },
   {
-   "fetch_from": "flight.source_airport",
+   "fetch_from": "flight.source_airport_code",
    "fieldname": "source_airport_code",
    "fieldtype": "Data",
    "label": "Source Airport Code ",
    "reqd": 1
+  },
+  {
+   "fieldname": "seat",
+   "fieldtype": "Data",
+   "label": "Seat",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-22 00:00:51.697308",
+ "modified": "2025-02-22 01:03:38.648979",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

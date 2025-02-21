@@ -8,16 +8,20 @@
  "field_order": [
   "section_break_lofm",
   "airplane",
-  "source_airport",
   "column_break_yztm",
   "status",
-  "destination_airport",
   "amended_from",
+  "airport_details_section",
+  "source_airport",
+  "source_airport_code",
+  "column_break_lsts",
+  "destination_airport",
+  "destination_airport_code",
   "departure_details_section",
-  "time_of_departure",
+  "date_of_departure",
   "duration",
   "column_break_iunr",
-  "date_of_departure"
+  "time_of_departure"
  ],
  "fields": [
   {
@@ -69,7 +73,8 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Scheduled\nCompleted\nCancelled"
+   "options": "Scheduled\nCompleted\nCancelled",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_yztm",
@@ -78,6 +83,7 @@
   {
    "fieldname": "source_airport",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Source Airport",
    "options": "Airport",
    "reqd": 1
@@ -85,6 +91,7 @@
   {
    "fieldname": "destination_airport",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Destination Airport ",
    "options": "Airport",
    "reqd": 1
@@ -97,12 +104,35 @@
   {
    "fieldname": "column_break_iunr",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "airport_details_section",
+   "fieldtype": "Section Break",
+   "label": "Airport Details"
+  },
+  {
+   "fieldname": "column_break_lsts",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "source_airport.code",
+   "fieldname": "source_airport_code",
+   "fieldtype": "Data",
+   "label": "Source Airport Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "destination_airport.code",
+   "fieldname": "destination_airport_code",
+   "fieldtype": "Data",
+   "label": "Destination Airport Code",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-02-21 23:52:22.098133",
+ "modified": "2025-02-22 00:36:39.010473",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
